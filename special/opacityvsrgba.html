@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS opacity vs hsla vs rgba</title>
+    <style>
+      html,
+      body {
+        background-color: coral;
+        font-size: 20px;
+      }
+      .box {
+        font-size: 1.2rem;
+        width: 400px;
+        padding: 1rem;
+        margin: 1rem;
+        border: 3px solid #333;
+      }
+      .box:nth-child(1) {
+        /* first box */
+        opacity: 0.1;
+        background-color: aqua;
+      }
+      .box:nth-child(2) {
+        /* second box */
+        background-color: hsla(200deg, 50%, 50%, 1);
+        color: rgba(20, 60, 200, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sed
+        nostrum laudantium excepturi, necessitatibus dignissimos nemo, in
+        doloribus rem labore aperiam unde, tempore animi deleniti iure provident
+        quibusdam consequuntur doloremque.
+      </p>
+    </div>
+
+    <div class="box">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga sed
+        nostrum laudantium excepturi, necessitatibus dignissimos nemo, in
+        doloribus rem labore aperiam unde, tempore animi deleniti iure provident
+        quibusdam consequuntur doloremque.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+<style>
+    
+
+p{
+  box-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.5), -2px -2px 4px  rgba(120, 120, 64, 0.5);
+  padding: 20px;   /*automatically the same background color as content  */
+  margin: 30px; /* always transparent  */
+  border: 10px solid red; /* you pick the color */
+
+
+/* 
+border-shorthand properties
+border-color: rgba(120, 120, 64, 0.5);
+border-style: groove; */
+
+/* border-bottom: 1rem solid olive;
+border-right: 1rem dotted blueviolet;
+border-left-color: brown;
+border-left-style: groove;
+border-top: none; */
+
+}
+p:hover{
+  box-shadow: 4px 4px 4px  rgba(0, 0, 0, 0.5);  
+}
+#ricky{
+  width: 300px;
+  height: 200px;
+  background-color: burlywood;
+  /* content area will be burlywood */
+  /*largest of two adjacenty margin is applied on top and bottom only */
+  /* but for left and right the margins ared added */
+  /* border-you specify the color 
+  padding-automatically the same as background
+  margin is always transparent
+  */
+  margin-bottom: 50px;
+  
+}
+#bubbles{  
+    border-width: 0;
+    margin:0;
+    background-color: cornflowerblue;
+
+}
+#julian{
+  margin-top: 0;
+
+
+}
+header h1{
+padding: 2rem;
+background-color: indianred;
+margin: 2rem;
+max-width: 50%;
+box-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.5), -2px -2px 4px  rgba(120, 120, 64, 0.5);
+;
+/* border-radius: 20px/100px ; */
+border-radius: 20px 30px 40px 50px/100px 200px ;
+border-radius: 20px 30px 30px 20px/100px ;
+}
+
+header h1:hover{
+box-shadow: 4px 4px 4px  rgba(0, 0, 0, 0.5);
+}
+
+
+</style>
+  </head>
+  <body>
+    <header id="randy" class="fred ricky bubbles julian">
+      <h1>CSS selector  chains CASCADE</h2>
+    </header>
+    <main   id="simon" class="simon">
+      <h1>Sub Heading</h1>
+      <p id="ricky">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt autem
+        doloribus Three tnkngs decide which stiles ge applied laborum
+        voluptatibus hic 3)source order veritatis quis, ea ullam minus, impedit
+        numquam blanditiis haru m? Sapiente, dignissimos? Aspernatur nam natus
+        quos laboriosam?
+      </p>
+      
+      <p id="bubbles">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt autem
+        doloribus laborum voluptatibus hic veritatis quis, ea ullam minus,
+        impedit numquam blanditiis harum? Sapiente, dignissimos? Aspernatur nam
+        natus quos laboriosam?
+      </p>
+      <p id="julian">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt autem
+        doloribus laborum voluptatibus hic veritatis quis, ea ullam minus,
+        impedit numquam blanditiis harum? Sapiente, dignissimos? Aspernatur nam
+        natus quos laboriosam?
+      </p>
+    </main>
+  </body>
+</html>

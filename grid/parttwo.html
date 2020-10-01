@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+      p > span {
+        font-weight: 900;
+      }
+      .intro {
+        grid-area: A;
+      }
+      .sidebar {
+        grid-area: B;
+      }
+      .main {
+        grid-area: C;
+      }
+      .foot {
+        grid-area: D;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 2rem;
+        grid-template-areas:
+          "A A"
+          "B C"
+          "D D";
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Grids - Named Grid Areas</h1>
+    </header>
+    <main>
+      <p class="intro">
+        <span>Area A</span> Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Facere vitae voluptates repellendus aspernatur, culpa, incidunt
+        veniam! A unde, nostrum incidunt laborum vero animi harum tempora
+        eveniet similique quae ducimus omnis.
+      </p>
+      <p class="sidebar">
+        <span>Area B</span> Consequuntur iure neque optio perspiciatis cumque
+        beatae corrupti blanditiis voluptatibus perferendis impedit et fuga
+        doloremque nam porro nisi magni exercitationem laboriosam architecto,
+        dicta ea nt? Fugiat doloremque animi, repudianda perspiciatis!
+      </p>
+      <p class="main">
+        <span>Area C</span> Odio minus quia laudantium, quibusdam itaque ad
+        nostrum cumque, commodi molestias reiciendis velit, cupiditate debitis
+        expedita qui. Eum, rerum eius beatae! Culpa, quod vero ducimus porro
+        saepe pariatur odit sit.
+      </p>
+      <p class="foot">
+        <span>Area D</span> Eum blanditiis molestiae ullam aliquid, tempora,
+        doloribus voluptas adipisci consequuntur corporis quia iste commodi
+        pariatur est consectetur labore excepturi ad atque laborum nihil optio,
+        iusto repellendus eveniet. Aliquam, recusandae, tenetur.
+      </p>
+    </main>
+  </body>
+</html>

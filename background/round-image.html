@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Round images</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 20px;
+        line-height: 1.7;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 400;
+        background-color: #333;
+      }
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 80vw;
+        margin: 2rem auto;
+      }
+      .card {
+        flex: 20vw 0 0;
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ccc;
+      }
+      img.avatar {
+        width: 80%;
+/*      20% on both side lefr and 10% each side remaining     */
+/*          10% of 20vw is 2vw and we use this in margin below as top and below*/
+        height: auto;
+        margin: 2vw auto;
+        padding: 0rem;
+        background-color: cornflowerblue;
+        border-radius: 50%;
+      }
+      .card > p {
+        font-size: 1rem;
+        padding: 1rem;
+        margin: 0;
+        background-color: #ddd;
+        color: #333;
+        /* 20px * 1.7 * 6 = 204px  + 40px = 244px */
+        height: 244px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      User images from https://randomuser.me/
+    -->
+    <main>
+      <div class="card">
+        <img src="../../img/33.jpg" alt="avatar" class="avatar" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis
+          qui, voluptates amet dignissimos quidem, voluptas nostrum sed suscipit
+          eos cum rem nam culpa praesentium.
+        </p>
+      </div>
+      <div class="card">
+        <img src="../../img/57.jpg" alt="avatar" class="avatar" />
+        <p>
+          Hic placeat cum illo molestiae, fugit dolor dolores consequatur
+          commodi nulla soluta tempore facere omnis tenetur nobis delectus
+          officia ullam esse alias libero.
+        </p>
+      </div>
+      <div class="card">
+        <img src="../../img/33.jpg" alt="avatar" class="avatar" />
+        <p>
+          Autem adipisci aliquam beatae incidunt commodi aspernatur asperiores
+          harum consequuntur magni laboriosam.
+        </p>
+      </div>
+      <div class="card">
+        <img src="../../img/3.jpg" alt="avatar" class="avatar" />
+        <p>
+          Dicta nobis unde animi quo quos assumenda iste mollitia minus,
+          cupiditate consequuntur, pariatur provident omnis odit nesciunt nam,
+          cumque accusamus.
+        </p>
+      </div>
+      <div class="card">
+        <img src="../../img/3.jpg" alt="avatar" class="avatar" />
+        <p>
+          Pariatur quia atque illum, ipsa possimus eum tenetur voluptates
+          commodi alias minima amet id aliquid harum cumque a.
+        </p>
+      </div>
+      <div class="card">
+ <img src="../../img/3.jpg" alt="avatar" class="avatar" />
+        <p>
+          Repellendus exercitationem architecto tempora impedit fugit totam
+          voluptates ex, quae et reprehenderit harum modi molestias quasi
+          obcaecati!
+        </p>
+      </div>
+    </main>
+  </body>
+</html> 

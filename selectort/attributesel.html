@@ -1,0 +1,73 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute Selectors</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="main.css" />
+    <style>
+           /******
+        [data-beatle] - has attribute
+        [data-beatle = "john"] - exact match
+        [data-beatle *= "o"]  -contains
+        [data-beatle ~= "john"]  - space separated
+        [data-beatle ^= "john"]  - starts with
+        [data-beatle $= "john"]  - ends with
+        [data-beatle |= "john"]  - hyphen separated, 1st value
+        
+        
+        ***/
+
+
+/* [] means attribute selector in css */
+/* [data-beatle]{
+    color: rebeccapurple;
+} */
+p[data-beatle="paul"]{
+    font-weight: bold;
+    color: rebeccapurple;
+}
+p[data-beatle*="g"]{
+/* if it contains g */
+font-style: italic;
+
+}
+p[data-beatle ^="george"]{
+color: blue;
+}
+p[data-beatle $="bingd"]{
+color: green;
+}
+p[data-beatle |="john"]{
+background-color: turquoise;
+}
+a[href ^="https://"]{
+    /* all anchor with href begin with http */
+    color: red;
+    padding: 2rem;
+}
+
+a[href $=".pdf"]{
+    /* all anchor ends with href end with http */
+    color: white;
+    font-weight: bold;
+}
+
+    </style>
+    <script>
+     
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Attribute Selectors</h1>
+    </header>
+    <main>
+        <p data-beatle="john-ringo tintin"><a href="https://www.example.com/document.pdf">Sample</a> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste voluptate, a obcaecati quae consequuntur nihil. Eaque voluptates, praesentium, tempore minima veritatis quam, necessitatibus illo ex officiis voluptate sit quibusdam perspiciatis.</p>
+        <p data-beatle="paul">Odio voluptas asperiores dicta facere nostrum cumque tenetur perferendis aut sint doloremque autem numquam quasi, eligendi quam sapiente quisquam voluptates beatae sunt magni ad eos sed veniam fugiat. Mollitia, iusto!</p>
+        <p data-beatle="george dfasf fdfaesfa">Optio eligendi cupiditate,<a href="https://www.example.com">Sample</a>  at laborum porro veniam libero ipsam voluptatibus vitae aliquid dolore iste nemo mollitia expedita. Deleniti consectetur laudantium minima aperiam quisquam. Corporis quos, unde tempora deleniti, quaerat molestiae!</p>
+        <p data-beatle="ringo bingd">Quos ratione vitae fugit consectetur cupiditate id! Repudiandae animi omnis earum iste cum magni tempore, sit dignissimos vero ad? A optio, excepturi eius facilis molestiae eum vero atque asperiores, error?</p>
+    </main>    
+    <footer>
+        <p>&copy; 2018 Turkey Stuff Inc.</p>
+    </footer>
+</body>
+</html>

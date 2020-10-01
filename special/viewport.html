@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* vw-viewport width
+ 1vh= 1% of  v height       
+        vh-viewport hright
+        vmin-smaller of vw and vh
+        vmax-larger of vw and vh
+         */
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      main {
+        border: 1px solid cornflowerblue;
+        padding: 1vh;
+        /* 1% of height */
+        margin: 0 auto;
+        width: 50vw;
+      }
+      h1 {
+        color: cornflowerblue;
+        font-size: 5vh;
+      }
+      p {
+        background-color: cornflowerblue;
+        color: white;
+        padding: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.7;
+        /* width: 50%; */
+        /* 50% of parent */
+        width: 50vw;
+        /* 50% of view; */
+        box-sizing: border-box;
+        /* fit the content inside the box */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>afadsfadefa</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic aperiam
+        quidem asperiores officia ipsam omnis, cum cumque ducimus officiis!
+        Consequuntur vitae eligendi tempora necessitatibus inventore incidunt
+        expedita, cum amet exercitationem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora
+        voluptatibus, saepe reprehenderit explicabo ut commodi magni eius quis
+        corrupti laborum quo. Dolore, iure accusantium. Aliquam excepturi quo
+        enim rerum dolore.
+      </p>
+    </main>
+  </body>
+</html>

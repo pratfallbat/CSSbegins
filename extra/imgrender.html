@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS image-rendering</title>
+    <style>
+      main {
+        font-size: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      figure {
+        flex: 50vw 1 0;
+      }
+      img {
+        width: auto;
+        height: auto;
+        image-rendering: auto;
+      }
+      figure img {
+        width: 100%;
+        height: auto;
+        image-rendering: auto;
+      }
+      img.crisp:hover {
+        width: 100%;
+        height: auto;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+      }
+      img.pixel:hover {
+        width: 100%;
+        height: auto;
+        -ms-interpolation-mode: nearest-neighbor;
+        image-rendering: pixelated;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Image Rendering</h1>
+      <h2>&ldquo;Enhance&rdquo;</h2>
+    </header>
+    <section>
+      <img src="http://picsum.photos/id/116/150/150" alt="original" />
+    </section>
+    <main>
+      <figure>
+        <img src="http://picsum.photos/id/116/150/150" alt="Sample image" />
+        <figcaption>Resized and browser's choice</figcaption>
+      </figure>
+      <figure>
+        <img
+          class="crisp"
+          src="http://picsum.photos/id/116/150/150"
+          alt="Sample image"
+        />
+        <figcaption>Resized and image-rendering: crisp-edges</figcaption>
+      </figure>
+      <figure>
+        <img
+          class="pixel"
+          src="http://picsum.photos/id/116/150/150"
+          alt="Sample image"
+        />
+        <figcaption>Resized and image-rendering: pixelated</figcaption>
+      </figure>
+    </main>
+  </body>
+</html>

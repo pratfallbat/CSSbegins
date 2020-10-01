@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>px vs em vs rem</title>
+    <style>
+        html {
+            font-size: 30px;
+            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #pixy {
+            font-size: 36px;
+            border-left: 30px solid hsl(60, 60%, 60%);
+            padding-left: 30px;
+        }
+
+        #pixy div {
+            font-size: 30px;
+        }
+
+        #pixy p:first-child {
+            font-size: 24px;
+        }
+
+        #pixy p:last-child {
+            font-size: 18px;
+        }
+
+        #pixy span {
+            font-size: 15px;
+        }
+
+        #emmy {
+            font-size: 1.2em;
+            /* 1.2 x 30px = 36px */
+/*            NOTE 1EM WOULD HAVE BEEN 30PX*/
+            border-left: 1.0em solid hsl(120, 60%, 60%);
+            padding-left: 1.0em;
+        }
+
+        #emmy div {
+            font-size: 1.0em;
+            /* 1 x 1.2 x 30px = 36px */
+        }
+
+        #emmy p:first-child {
+            font-size: 0.8em;
+            /* 0.8 x 1 x 1.2 X 30px = 28.8px */
+        }
+
+        #emmy p:last-child {
+            font-size: 0.6em;
+            /* 0.6 x 1.0 x 1.2 x 30px = px */
+        }
+
+        #emmy span {
+            font-size: 0.5em;
+            /* 0.5 x 0.8 x 1.0 x 1.2 x 30px = px */
+        }
+
+        #remmy {
+            font-size: 1.2rem;
+            /* 1.2 x 30px = 36px */
+            border-left: 1.0rem solid hsl(180, 60%, 60%);
+            padding-left: 1.0rem;
+        }
+
+        #remmy div {
+            font-size: 1.0rem;
+            /* 1.0 x 30px = 30px */
+        }
+
+        #remmy p:first-child {
+            font-size: 0.8rem;
+            /* 0.8 * 30px = 24px */
+        }
+
+        #remmy p:last-child {
+            font-size: 0.6rem;
+            /* 0.6 x 30px = 18px */
+        }
+
+        #remmy span {
+            font-size: 0.5rem;
+            /* 0.5 x 30px = 15px */
+        }
+
+        div::first-line {
+            font-weight: 700;
+        }
+
+        @media all and (max-width: 800px) {
+            html {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="pixy">
+        <div>PX: 
+            <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Saepe voluptates, dicta voluptate
+                itaque culpa
+                nA<a href="https://youtu.be/gOv_yT4aq6A">CSS learning</a>on hic, at aspernatur perspiciatis exercitationem unde obcaecati ullam, iusto quam nihil. Non unde
+                fugiat deserunt?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptates, dicta voluptate itaque culpa
+                non hic, at aspernatur perspiciatis exercitationem unde obcaecati ullam, iusto quam nihil. Non unde
+                fugiat deserunt?</p>
+        </div>
+    </section>
+    <section id="remmy">
+        <div>REM:
+            <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Saepe voluptates, dicta voluptate
+                itaque culpa
+                non hic, at aspernatur perspiciatis exercitationem unde obcaecati ullam, iusto quam nihil. Non unde
+                fugiat deserunt?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptates, dicta voluptate itaque culpa
+                non hic, at aspernatur perspiciatis exercitationem unde obcaecati ullam, iusto quam nihil. Non unde
+                fugiat deserunt?</p>
+        </div>
+    </section>
+    <section id="emmy">
+        <div>EM:
+            <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Saepe voluptates, dicta voluptate
+                itaque culpa
+                non hic, at aspernatur perspiciatis exercitationem unde obcaecati ullam, iusto quam nihil. Non unde
+                fugiat deserunt?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptates, dicta voluptate itaque culpa
+                non hic, at aspernatur perspiciatis exercitationem unde obcaecati ullam, iusto quam nihil. Non unde
+                fugiat deserunt?</p>
+        </div>
+    </section>
+</body>
+
+</html>

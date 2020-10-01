@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+<style>
+    
+
+    html body  h1{  
+      color: gold;
+
+    }
+
+    body h1{
+      color: red;
+    }
+    
+    .fred h1{      /* classes are applied after the tag style as they have higher specificity */
+      color: greenyellow;
+    }
+
+    #simon h1{
+   color: rebeccapurple;
+    }
+    /* .ricky     .bubbles     .julian h1{
+      /* this means julian is inside the class bubbles and bubbles is inside ricky */
+
+    /* } */ 
+
+    header.ricky.bubbles.julian h1{       /* h1 have to have all these classes */
+      color: salmon;
+    
+    }
+
+    header#randy.ricky.bubbles.julian h1{       /* h1 have to have all these classes and id so most specific */
+      color: seagreen;
+    }
+
+
+
+
+
+</style>
+  </head>
+  <body>
+    <header id="randy" class="fred ricky bubbles julian">
+      <h1>CSS selector  chains CASCADE</h2>
+    </header>
+    <main   id="simon" class="simon">
+      <h1>Sub Heading</h1>
+      <p>
+        <img src="../../../img/deadpool.jpg" alt="" width="90px" height="90px" />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt autem
+        doloribus Three tnkngs decide which stiles ge applied laborum
+        voluptatibus hic 3)source order veritatis quis, ea ullam minus, impedit
+        numquam blanditiis haru m? Sapiente, dignissimos? Aspernatur nam natus
+        quos laboriosam?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt autem
+        doloribus laborum voluptatibus hic veritatis quis, ea ullam minus,
+        impedit numquam blanditiis harum? Sapiente, dignissimos? Aspernatur nam
+        natus quos laboriosam?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt autem
+        doloribus laborum voluptatibus hic veritatis quis, ea ullam minus,
+        impedit numquam blanditiis harum? Sapiente, dignissimos? Aspernatur nam
+        natus quos laboriosam?
+      </p>
+    </main>
+  </body>
+</html>

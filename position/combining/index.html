@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #main {
+        background-color: hsl(120, 30%, 80%);
+        /* margin-top: 5rem; */
+        /* top: 0;
+        left: 5rem; */
+        left: 1rem;
+        position: relative; /* moved footer also */
+      }
+      #box {
+        background-color: hsl(240, 30%, 80%);
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+      }
+      footer {
+        background-color: hsl(60, 30%, 80%);
+        margin-top: 10rem;
+        position: relative;
+        top: 2rem;
+        left: 8rem;
+      }
+      footer::after {
+        position: absolute;
+        content: "abs";
+        display: block;
+        background-color: rebeccapurple;
+        top: 0;
+        left: 0;
+        /* comment on the images */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Combining position relative &amp; absolute</h1>
+    </header>
+    <main id="main">
+      <div id="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem,
+        blanditiis dicta. Et magni reprehenderit quisquam cumque architecto
+        omnis quos quaerat, voluptatibus quae a corporis cum quibusdam dolor,
+        dolores reiciendis quasi?
+      </div>
+    </main>
+    <footer><p>&copy; 2018 Chicken Stuff Inc.</p></footer>
+  </body>
+</html>

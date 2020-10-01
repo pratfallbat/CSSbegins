@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Variables</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      :root {
+        --COLOR: blue;
+        --SPACE: 10px;
+      }
+      h1 {
+        color: var(--COLOR);
+        border-bottom: var(--SPACE) solid var(--COLOR);
+      }
+      p {
+        color: var(--COLOR);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Variables</h1>
+    </header>
+    <main>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt
+        suscipit, harum repellat ex esse amet fugiat. Quisquam ipsum perferendis
+        tenetur iste incidunt omnis, unde. Soluta sed aliquid, ad eveniet!
+      </p>
+      <p style="--COLOR: green">
+        Temporibus vel harum sint maxime quisquam deserunt, rerum recusandae
+        labore voluptatum ea quod explicabo, quidem hic asperiores nihil nemo,
+        molestiae iste error at iure culpa unde dolorem. Eligendi,
+        exercitationem. Excepturi!
+      </p>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let html = document.documentElement;
+        html.style.setProperty("--COLOR", "olive");
+      });
+    </script>
+  </body>
+</html>

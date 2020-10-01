@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Animations</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 20px;
+        line-height: 1.5;
+        font-family: sans-serif;
+      }
+      header,
+      main {
+        padding: 1rem 2rem;
+      }
+      p {
+        padding: 0.5rem 0;
+        color: #999;
+      }
+      code {
+        color: #333;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #999;
+        background-color: cornflowerblue;
+        color: white;
+        padding: 1rem;
+        margin: 1rem auto;
+        animation-name: wheeee;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        /* constant rate of change */
+        animation-delay: 1000ms;
+        animation-iteration-count: 12;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
+      }
+      .box:hover {
+        animation-play-state: paused;
+      }
+      @keyframes wheeee {
+        0% {
+          transform: rotate(0deg) scale(1);
+          /* transform: scale(1); */
+          background-color: cornflowerblue;
+        }
+
+        50% {
+          transform: rotate(180deg) scale(2);
+        }
+        100% {
+          transform: rotate(270deg) scale(1);
+          background-color: lightcoral;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Animations</h1>
+    </header>
+    <main>
+      <p>stickl withcolor opacity and transform</p>
+      <p>
+        Animations require a <code>@keyframes</code> name with the steps of the
+        animation defined
+      </p>
+      <p>
+        Then the element to be animated will reference the
+        <code>@keyframes</code> name.
+      </p>
+      <p>
+        The element uses an <code>animation</code> property that can set the
+        values for <code>duration</code>, <code>timing-function</code>,
+        <code>delay</code>, <code>iteration-count</code>,
+        <code>direction</code>, <code>fill-mode</code>, <code>play-state</code>,
+        and <code>name</code>
+      </p>
+    </main>
+    <section>
+      <div class="box">Animated</div>
+    </section>
+  </body>
+</html>

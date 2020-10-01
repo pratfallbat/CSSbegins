@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Hyphens</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      main > p {
+        max-width: 150px;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        /* none | auto | manual */
+        outline: 1px solid red;
+
+        overflow: scroll;
+        /* scroll | visible | hidden | auto */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Hyphens</h1>
+    </header>
+    <main>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur&shy;adipisicing&shy;elit.
+        Minus&shy;iustoper&shy;ferendisnatus ex at perspiciatis,
+        quis&shy;quam&shy;inventore&shy;suscipit&shy;facere quae, possimus quia
+        eligendi ipsa laborum qui optio nisi, architecto eius!
+      </p>
+      <p>
+        Sequi necessitatibus consequuntur et optio porro, ratione, natus
+        adipisci, libero similique maxime perferendis ex, explicabo magni.
+        Quaerat facere quisquam incidunt nulla consectetur quas natus. Tempora
+        rerum officia cupiditate alias quo!
+      </p>
+    </main>
+  </body>
+</html>

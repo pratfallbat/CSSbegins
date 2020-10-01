@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .listnav {
+        background-color: #bada55;
+        margin: 1rem 0;
+      }
+
+      .listnav ul {
+        overflow: auto;
+        /* height: 3rem; */
+      }
+      .listnav li {
+        float: left;
+        list-style: none;
+        width: 20%;
+        /* calculeted =100%/5=20%
+        100%=parent
+        5- for 5 li
+         */
+      }
+      .listnav a {
+        color: #333;
+        font-weight: 900;
+        text-decoration: none;
+        display: block;
+      }
+      .listnav a:hover {
+        color: cornflowerblue;
+      }
+
+      header .flexnav {
+        position: fixed;
+        width: 100%;
+        margin-top: -20px;
+        margin-left: -8px;
+        /* margin-right: -8px; */
+
+        padding: 20px;
+        background-color: black;
+        /* margin: 1rem 0; */
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        /* space arounf .5 both side
+        .space-between 0 both side
+        .space-evenly 1 both side
+         */
+      }
+      p {
+        cursor: url(../../img/img-1.jpg), wait;
+        background-color: #eecccc;
+        padding: 1rem;
+        margin: 1rem 1rem;
+      }
+      p:hover {
+        cursor: nwse-resize;
+      }
+      .flexnav a {
+        color: wheat;
+        font-weight: 900;
+        font-size: 20px;
+        text-decoration: none;
+        /* background-color: darkcyan; */
+        /* display: block; */ /* wont work here  so we use below and nowrap in parent*/
+        flex: 100% 1 1;
+      }
+      .flexnav a:hover {
+        color: cornflowerblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <header>
+      <h1>Flexbox Nav Menus</h1>
+    </header> -->
+
+    <!-- <nav class="listnav">
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+        <li><a href="#">Link 5</a></li>
+      </ul>
+    </nav> -->
+    <header>
+      <nav class="flexnav">
+        <a href="#">Link 1</a>
+        <input type="text" />
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+        <a href="#">Link 5</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 4</a>
+        <a href="#">Link 5</a>
+      </nav>
+    </header>
+    <main>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
+        voluptatibus nobis nihil ut non. Dicta tempore odio delectus nulla
+        labore? Dolorem quibusdam sequi ipsa ipsam velit omnis voluptatum
+        necessitatibus corrupti? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Sequi voluptatibus nobis nihil ut non. Dicta tempore
+        odio delectus nulla labore? Dolorem quibusdam sequi ipsa ipsam velit
+        omnis voluptatum necessitatibus corrupti?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
+        voluptatibus nobis nihil ut non. Dicta tempore odio delectus nulla
+        labore? Dolorem quibusdam sequi ipsa ipsam velit omnis voluptatum
+        necessitatibus corrupti? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Sequi voluptatibus nobis nihil ut non. Dicta tempore
+        odio delectus nulla labore? Dolorem quibusdam sequi ipsa ipsam velit
+        omnis voluptatum necessitatibus corrupti?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
+        voluptatibus nobis nihil ut non. Dicta tempore odio delectus nulla
+        labore? Dolorem quibusdam sequi ipsa ipsam velit omnis voluptatum
+        necessitatibus corrupti? Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Sequi voluptatibus nobis nihil ut non. Dicta tempore
+        odio delectus nulla labore? Dolorem quibusdam sequi ipsa ipsam velit
+        omnis voluptatum necessitatibus corrupti?
+      </p>
+    </main>
+  </body>
+</html>

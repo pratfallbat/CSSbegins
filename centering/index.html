@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Centering Everything</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        p{
+            padding: 1rem;
+            background-color: hsl(290, 30%, 90%);
+        }
+        .one{
+            border: 1px solid #999;
+            width: 80%;
+            margin: 1rem auto;
+        }
+        .one p:first-of-type{
+            margin: 0 auto;
+/*            text-align: center;*/
+        }
+            .one p:last-of-type{
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        
+        .one span{ 
+              margin: 0 auto;
+            background-color: hsl(290, 30%, 90%);  
+            text-align: center;
+            
+        }
+            .one span:first-of-type{
+          width: 100%   ;    
+                display: inline;
+          
+/*                margin can nobt be set when something is displayed inline  or inline
+                ,its only if something displayed block*/
+          
+              
+        }
+           .one span:last-of-type{
+                 
+               width: 50%;     
+                 display: block;
+               
+        }
+        .one span:nth-of-type(2){
+               width: 50%;     
+                 display: inline-block;
+            background-color: bisque
+        }
+        
+        .two{
+            border: 1px solid #999;
+            width: 80%;
+            margin: 1rem auto;
+            display: flex;
+/*           FLEX BY DEFAUL IS NOWRAP THAT IS EVERY IS IN ONE ROW*/
+/*            flex-wrap: nowrap;   default*/
+            flex-wrap: wrap;
+           
+            flex-direction: row;
+            justify-content: space-evenly;
+/*            horizontal align the whole content*/
+            align-items: center;
+/*            vertically align in column direction*/
+        }
+        .two p{
+            flex-basis: 40%;
+/*            each one will take 40%*/
+/*            text-align: center;*/
+            color: green;
+            
+            text-align: center;
+        }
+        .two p:nth-child(1){}
+        .two p:nth-child(2){}
+        .two p:nth-child(3){}
+        .two p:nth-child(4){}
+        
+        .three{
+            border: 1px solid #999;
+            width: 80%;
+            margin: 1rem auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: flex-start;
+/*            along row*/
+            align-items: center;
+/*            along column*/
+        }
+        .three p{
+            text-align: center;
+        }
+        .three p:nth-child(1){}
+        .three p:nth-child(2){}
+        .three p:nth-child(3){}
+        .three p:nth-child(4){}
+    </style>
+</head>
+<body>
+    <section class="one">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde perspiciatis voluptatem illum. Facilis, at, veniam! Ipsa maxime doloribus consequuntur inventore praesentium dolor!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi odit esse dolores illo ratione tempore porro reprehenderit dolor sequi tempora debitis.</p>
+        <p>Small amount of text.</p>
+        <span>INLINE</span>
+        <br/>
+        
+        <span>inline-BLOCK</span>
+        <br/>
+        
+        <span>BLOCK</span>
+    </section>
+    
+    <section class="two">
+        <p>Lorem ipsum dolor sit ametcidunt necessitatibus recusandae soluta repellat delectus voluptatem.</p>
+        <p>flex</p>
+        <p>Iure est pariatur porro, error alias atque. Repudiandae eaque nobis deserunt numquam, impedit beatae fugiat quis, officia voluptates aliquam culpa neque eos.</p>
+        <p>flex</p>
+    </section>
+    
+    <section class="three">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit mollitia accusamus, consequuntur rerum iste necessitatibus eaque. Sit rerum quibusdam in consequatur nostrum neque suscipit necessitatibus cumque possimus doloremque, dolor, deleniti?</p>
+        <p>grid</p>
+        <p>Officia, error cumque, quod expedita voluptatem corporis quidem cupiditate odio quis explicabo recusandae. Ducimus facere voluptatem quasi eligendi deleniti nihil adipisci eos illo modi ipsum ullam corporis laudantium, consequuntur tempore.</p>
+        <p>grid</p>
+    </section>
+</body>
+</html>

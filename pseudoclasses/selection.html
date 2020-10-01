@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>::selection pseudo-element</title>
+    <style>
+      html {
+        font-size: 20px;
+        line-height: 1.7;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      body {
+        min-height: 100vh;
+        background-color: #fff;
+        color: #333;
+      }
+      ::selection {
+        background-color: #333;
+        color: #fff;
+        text-shadow: 2px 2px 4px cornflowerblue;
+
+          
+          cursor: help;
+         
+        /**
+        cursor: help;
+        caret-color: gold;
+        outline: 5px solid gold;
+        text-decoration: overline;
+        text-emphasis-color: gold;
+        **/
+      }
+
+      body.dark {
+        background-color: #333;
+        color: #e4e4e4;
+      }
+      .dark ::selection {
+        background-color: lightsalmon;
+        color: maroon;
+      }
+        
+        .mek{
+               background-color: #333;
+        color: #fff;
+        text-shadow: 2px 2px 4px cornflowerblue;
+
+        }
+        p:first-of-type{
+            color: green;
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 2rem 0 1.2rem;
+            border: 0;
+            margin: 0,5rem 0;
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.4;
+            position: relative;
+        }
+        
+        p:first-of-type::after{
+         position: absolute;
+            content: "",
+                display:block;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            line-height: 1;
+            width: 100%;
+            background-color: goldenrod;
+            transform-origin: right bottom;
+            transform: scaleX(0);
+            transition: transform 0.4s linear;
+            
+        }
+        p:first-of-type:hover{
+            color: red;
+            text-decoration: underline;
+            font-size: 2rem;
+            transition: all 4s;
+        }
+        
+    </style>
+  </head>
+  <body >
+    <header>
+      <h1>::selection pseudo-element</h1>
+    </header>
+        <main>
+      <p >
+        <span
+          >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates
+          delectus illo maiores, blanditiis possimus error assumenda eos ut nam
+          iusto voluptatem voluptas voluptate neque, doloremque nostrum aliquam
+          libero deserunt expedita? </span
+        ><span
+          >Accusamus veniam deleniti eaque sint magni excepturi ut libero et
+          aliquam repellat quis, ipsam eius mollitia, nesciunt debitis
+          recusandae magnam ipsa vel consequuntur? Officiis ea doloremque
+          tenetur totam accusantium similique.</span
+        >
+      </p>
+      <p>
+        <span
+          >Ad quibusdam iste consequuntur quae atque a ut sequi, eius quidem.
+          Eveniet sint quaerat maxime distinctio fugiat. Itaque veniam laborum
+          tempora sit, libero perferendis maxime, optio, ea quasi debitis
+          placeat.</span
+        ><span
+          >Placeat similique officia quia eius itaque sed. Aliquid quos sunt
+          laudantium amet blanditiis, magni ducimus facilis commodi similique
+          quibusdam excepturi tempora? Ratione perferendis ut, sunt officiis
+          amet architecto? Quisquam, magnam.</span
+        >
+      </p>
+      <p>
+        <span
+          >Autem magnam ex sint incidunt at dolor exercitationem repellat
+          corrupti! Harum voluptatibus ducimus, dolorem maiores nihil sequi
+          accusamus eius. Omnis quos adipisci veniam in assumenda iure excepturi
+          veritatis, alias pariatur?</span
+        ><span
+          >Pariatur, perferendis ex fugit quibusdam numquam vitae voluptas ipsa
+          dolorem excepturi ullam ducimus eius ut doloribus. Optio temporibus
+          consectetur suscipit? Iure earum recusandae expedita totam, facilis
+          laboriosam amet doloribus cum!</span
+        >
+      </p>
+        <button id="btn">Dark mode</button>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", ev => {
+        document.body.addEventListener("dblclick", ev => {
+          document.body.classList.toggle("dark");
+        });
+          
+          document.getElementById("btn").onclick = function changeContent() {
+
+  document.body.classList.toggle("mek");
+
+}
+      });
+    </script>
+  </body>
+</html>

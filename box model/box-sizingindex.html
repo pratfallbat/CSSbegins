@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS box-sizing</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      main {
+        box-sizing: content-box; /* default */
+        width: 400px; /* to hold children */
+        border: 10px solid red;
+        padding: 10px;
+        /*            overflow: hidden*/
+      }
+      main > p {
+        width: 360px;
+        padding: 10px;
+        border: 10px solid #bada55;
+        margin: 0px;
+      }
+      main p:nth-child(1) {
+        box-sizing: content-box;
+
+        /* 
+            the 20px margin spills out of the 360px 
+            */
+      }
+      main p:nth-child(2) {
+        box-sizing: border-box;
+        /*
+            360px includes 20px padding + 20px border = content 
+            */
+      }
+      main p:nth-child(3) {
+        box-sizing: content-box;
+        /*
+            360px width = content 
+            */
+        margin: 0;
+      }
+      main p + p {
+        color: gold;
+      }
+      main p::after {
+        content: attr(date-time);
+        display: block;
+        color: olive;
+        font-size: 1.5rem;
+      }
+      main p:nth-child(1)::before {
+        content: "HELLo";
+        padding-right: 1rem;
+      }
+
+      main p:nth-child(1)::before:hover {
+        /* wron -cannot added pseudo classes on pseudo element */
+        color: black;
+      }
+      main p:nth-child(1):hover::before {
+        /* wron -cannot added pseudo classes on pseudo element */
+        color: red;
+        font-weight: bold;
+        text-shadow: red;
+        box-shadow: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS3 box-sizing</h1>
+    </header>
+    <main>
+      <p date-time="sxcbnas hxsvyhjasg  asydy!!!">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
+        molestias vero officiis, amet nam aspernatur molestiae excepturi
+        similique, tenetur repudiandae quidem magni, maiores accusamus error
+        eius facilis optio culpa at.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias velit
+        cum necessitatibus fugiat sunt delectus, officia nulla at obcaecati
+        laboriosam ut accusamus, est eveniet illo, possimus, dolorum vitae
+        reprehenderit. Aspernatur.
+      </p>
+      <p date-time="sxcbnas hxsvyhjasg  asydy!!!">
+        Harum labore adipisci quibusdam vero odio quae blanditiis ducimus libero
+        ab facilis totam sunt atque ex laborum placeat dolore sed repudiandae
+        mollitia earum, ad deleniti consequatur facere reprehenderit
+        exercitationem. Cumque!
+      </p>
+    </main>
+  </body>
+</html>

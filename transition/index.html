@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Intro to CSS Float</title>
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        box-sizing: border-box;
+        font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto",
+          "Helvetica Neue", "Arial", sans-serif;
+        font-size: calc(1.5vh + 1vw + 1%);
+        line-height: 1.5;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      body {
+        overflow: auto;
+        min-height: 100vh;
+        width: 100%;
+      }
+
+      main,
+      header {
+        padding: 1rem 2rem;
+      }
+
+      p:first-of-type {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      p:nth-of-type(2) {
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      p:nth-of-type(3) {
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: orangered;
+      }
+      .box {
+        /* box-shadow: -2px -2px 4px rgba(120, 120, 64, 0.5); */
+
+        max-width: 30rem;
+        /* max-height: 40rem; */
+        border: 1px solid #ddd;
+        position: relative;
+      }
+      .box:hover {
+        box-shadow: -2px -2px 4px rgba(130, 120, 64, 0.5);
+      }
+      .box-title {
+        padding: 0.5rem;
+
+        background-color: hsl(0, 43%, 1%);
+        color: hsl(0, 30%, 95%);
+      }
+      .box-title h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        text-align: center;
+        transition: letter-spacing 0.9s;
+      }
+      /* .box-title h2:hover {
+        background-color: paleturquoise;
+        color: black;
+      } */
+      .box-title .nine {
+        letter-spacing: 9px;
+        background-color: rgb(11, 102, 102);
+        color: black;
+      }
+      .box-content {
+        padding: 0.5rem;
+      }
+
+      .box-content p {
+        font-size: 1rem;
+        font-weight: 100;
+        color: #333;
+      }
+      .box-content img {
+        width: 20%;
+        height: auto;
+        margin: 15px 1rem 0.5rem 4px;
+        float: left;
+        color: #333;
+        transform: rotate(15deg);
+        transition: transform 0.6s;
+      }
+      .box-content:hover img {
+        /*if box content gets hovered then image  */
+        transform: rotate(-15deg);
+      }
+
+      .box-footer {
+        padding: 1rem 0.5rem;
+        background-color: hsl(220, 20%, 60%);
+        color: hsl(220, 20%, 95%);
+        position: absolute;
+        bottom: 0rem;
+        width: 100%;
+        font-style: normal;
+        transform: translateY(0rem);
+        transition: transform 1s cubic-bezier(0.1, 1.02, 0.83, 0.67) 0s,
+          color 3s linear 1s, padding 2s ease-in 2s, font-style 2s ease-out 3s;
+        /* ease-in starts slow then fast */
+        /* ease in out slow fast slow */
+        /* 0.3s delay */
+      }
+      .box:hover .box-footer {
+        transform: translateY(3rem);
+        color: burlywood;
+        font-weight: bold;
+        font-style: italic;
+        padding: 1.5rem;
+      }
+      .box-footer p {
+        font-size: 0.7rem;
+        line-height: 1rem;
+        font-weight: 100;
+        letter-spacing: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Transition</h1>
+    </header>
+    <main>
+      <div class="box">
+        <div class="box-title">
+          <h2 class="nine">The Box Title</h2>
+        </div>
+        <div class="box-content">
+          <p>
+            <img src="../../img/CN-660x440.jpg" alt="" />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+            tenetur architecto atque eveniet dolores. Sed accusamus perferendis
+            voluptas officiis odio veritatis facilis deserunt exercitationem,
+            dignissimos deleniti repudiandae repellat illum unde. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Accusantium tenetur
+            architecto atque eveniet dolores. Sed accusamus perferendis voluptas
+            officiis odio verittationem, dignissimos deleniti repudiandae
+            repellat illum unde.
+          </p>
+        </div>
+        <div class="box-footer">
+          <p>some text in foot areA</p>
+          <p>some text in foot areA</p>
+        </div>
+      </div>
+    </main>
+    <script>
+      let h2 = document.querySelector(".box-title h2");
+      let timmy = setInterval(function () {
+        h2.classList.toggle("nine");
+      }, 2000);
+    </script>
+  </body>
+</html>

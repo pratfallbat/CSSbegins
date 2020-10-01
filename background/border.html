@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: auto;
+        font-size: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        line-height: 1.7;
+
+        min-height: 100vh;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        width: 400px;
+        margin: auto;
+        padding: 1rem;
+        color: #fff;
+        background-color: #000;
+        position: relative;
+        border: 5px solid transparent;
+        box-sizing: border-box;
+        background-clip: padding-box;
+        border-radius: 1rem;
+      }
+      .box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -5px;
+        border-radius: inherit;
+/*          take what parent has*/
+        background: linear-gradient(to right, cornflowerblue, #bada55);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos
+        temporibus, aliquid, accusantium deserunt culpa voluptates doloremque
+        expedita, mollitia maxime nesciunt magnam officia? Ipsam aut temporibus
+        molestias. In ea iusto tempore.
+      </p>
+    </div>
+  </body>
+</html>

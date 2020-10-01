@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Backgrounds</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css" />
+    <!--
+    MDN background reference
+    https://developer.mozilla.org/en-US/docs/Web/CSS/background
+    -->
+    <style>
+      p::before {
+        content: attr(data-font) "::: coming from css :----------------";
+        transform: rotate(data-font deg);
+        /*above not supported yet by browser */
+        background-color: #333;
+      }
+      p {
+        width: attr(data-font px, 500px);
+      }
+      p::after {
+        content: "::: coming from css :----------------" attr(data-font)
+          "Thank you";
+      }
+
+      p {
+        /**************************************************
+            background-color: cornflowerblue; -1st in last layer
+            background-image: url(archer-bob.jpg); - 0|1 instance
+            background-position: center center; - 0|1 instance
+                                    - bottom left right top
+                                    - horizontal vertical
+            background-size: cover; - 0|1 instance 
+                                    - immediately after position
+                                    - position / size
+                                    - cover | contain | auto
+            background-repeat: no-repeat; - 0|1 instance
+                                    - repeat-x repeat-y repeat
+            background-attachment: fixed;  - 0|1 instance
+                                    - local scroll
+            background-origin: border-box; - comes first
+                                    - padding-box content-box
+            background-clip: content-box;  - comes second
+            
+            - commas between layers
+            **************************************************/
+      }
+      header {
+        min-height: 10rem;
+        padding: 1rem;
+        border-top: 10px dashed #333;
+        border-bottom: 10px dashed #333;
+        background-image: url(), url(), url();
+
+        /* or */
+        /* cover */
+        /* background: cornflowerblue url(../../img/CN-660x440.jpg) left top /
+          contain no-repeat padding-box content-box; */
+
+        background: cornflowerblue url(../../img/CN-660x440.jpg) right top /
+          contain no-repeat fixed border-box border-box;
+      }
+      header > h1 {
+        text-shadow: 2px 2px 2px #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Backgrounds</h1>
+    </header>
+    <main>
+      <p title="bob" data-font="20">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        dolores eligendi quasi, minus placeat ullam sit quaerat perspiciatis?
+        Delectus ducimus enim omnis iusto quo sunt suscipit veniam debitis
+        praesentium neque!
+      </p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Grid</title>
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+      main {
+        padding: 10px;
+        background-color: grey;
+        color: cornsilk;
+        display: grid;
+        /* grid-template-columns: 1fr 2fr; */
+        /* grid-template-columns: minmax(150px ,1fr); */
+        grid-template-columns: repeat(1, minmax(150px, 1fr) 2fr);
+        /* repeat 1 tume  */
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+      }
+
+      main > p {
+        color: #333;
+        background-color: #fff;
+        padding: 0.5rem 1rem;
+        display: flex;
+
+        justify-content: center;
+        /* horizontal */
+        align-items: center; /* vertically center */
+      }
+
+      p:nth-of-type(1) {
+        /* grid-column-start: 1;
+        grid-column-end: 3; */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Grid</h1>
+    </header>
+    <main>
+      <p>
+        First Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est nemo
+        odit eaqLorem ipsum dolor sit amet, consectetur adipisicing elit. Est
+        nemo odit eaqLorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Est nemo odit eaqLorem ipsumm aperiam, eos obcaecati debitis cumque a
+        voluptatibus! Facilis doloremque hic, possimus illum?
+      </p>
+      <p>
+        Second Officiis voluptates voluptatem adipisci totam unde quisquam sequi
+        vero ipsum earum erroqLorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Est nemo odit eaqLorem ipsum dolor sit amet,
+        consectetur adipisicing elit. Est nemo odit eaqLorem ipsum dolor sit
+        amet, consectetnam id est, neque reiciendis recusandae asperiores
+        accusantium repellat, ab debitis obcaecati sapiente. Odio sapiente
+        repellat vel.
+      </p>
+      <p>
+        Third Officiis voluptates voluptatem adipisci totam unde quisquam sequi
+        vero ipsum earum erroqLorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Est nemo odiipisicing elit. Est nemo odit eaque natus
+        in, facilis earum delectusr quasi nam id est, neque reiciendis
+        recusandae asperiores accusantium repellat, ab debitis obcaecati
+        sapiente. Odio sapiente repellat vel.
+      </p>
+      <p>
+        Officiis voluptates voluptatem adipisci totam unde quisquam sequi vero
+        ipsum earum erroqLorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Est nemo odit eaqLorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Est nemo odit eaqLorem ipsum dolor sit amet,
+        consectetur adipisicing elit. Est nemo odit eaq Lorem ipsum dolor sit
+        amet, consectetur adipepellat, ab debitis obcaecati sapiente. Odio
+        sapiente repellat vel.
+      </p>
+      <p>
+        Obcaecati asperiores nemo delectus numquam repellendus nam excepturi
+        tenetur dignissimos officiis sapiente aspernatur consequatur
+        reprehenderit, molestias earum, vel cumque. Cum quasi hic, accusantium.
+        Eos mollitia, libero repudiandae ipsum consectetur. Quae!
+      </p>
+      <p>
+        Aliquid laboriosam illum sint. Vel dolor recusandae accusantium,
+        possimus, fugit distinctio, earum eum pariatur necessitatibus quod
+        minima molestiae rem fugiat voluptate! Nisi eaque nobis, voluptatem
+        eligendi et voluptas consequuntur asperiores?
+      </p>
+    </main>
+    <footer>
+      <p>&copy; 2018 Turkey Stuff Inc.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Display Property</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        font-size: 16px;
+        line-height: 1.5;
+        font-family: "Droid Sans", sans-serif;
+      }
+      header,
+      main {
+        margin: 1rem 2rem;
+      }
+      p {
+        color: hsla(0deg, 50%, 100%, 0.5);
+        font-size: 1rem;
+        padding: 1rem;
+        display: inline-block;
+      }
+      #one {
+        background-color: rebeccapurple;
+        display: block;
+      }
+      #two {
+        background-color: darkgoldenrod;
+        display: inline-block;
+      }
+      #three {
+        background-color: cornflowerblue;
+        display: block;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+        /* display: none; */
+      }
+      /* a {
+        display: none;
+      } */
+      a {
+        padding: 1rem 2rem;
+        background: #ccc;
+        text-decoration: none;
+      }
+      main a,
+      #two a {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS `display` property</h1>
+      <h2>block, inline, inline-block, none</h2>
+    </header>
+    <main>
+      <p id="one">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nesciunt
+        soluta quibusdam hic perferendis
+        <img src="https://picsum.photos/100/100/" width="100" height="100" />
+        eligendi ducimus pariatur sequi officia necessitatibus optio sapiente
+        cupiditate, fugiat, quis non repellat reiciendis accusamus vero.
+      </p>
+      <a href="#">asdf</a>
+      <p id="two">
+        Eos similique a debitis. Magni ratione, laboriosam veritatis
+        consectetur, <a href="#">ABCD</a> alias nobis fuga repellendus odit
+        soluta aliquam esse sit incidunt porro eum dolor ea sint fugiat autem?
+        Quisquam voluptatibus excepturi et.
+      </p>
+      <p id="three">
+        Nisi repellendus, rerum corrupti ad unde consectetur minus, corporis
+        ipsum possimus odio ratione doloremque, voluptates fugit nihil modi
+        atque tempora quis laboriosam nulla nam totam, quae. Atque laboriosam,
+        eum repudiandae!
+      </p>
+    </main>
+  </body>
+</html>

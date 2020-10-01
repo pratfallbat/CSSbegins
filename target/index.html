@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS :target Pseudo-Class</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="../video-pages/main.css" />
+    <style>
+      a.current {
+        /* all: inherit; */
+        /* remove style shortcut */
+      }
+      a {
+        font-size: 1rem;
+        padding: 0.2rem 1rem;
+      }
+      a.current {
+        color: white;
+        background-color: darkolivegreen;
+        text-shadow: 1px 1px 1px #333;
+        font-weight: 900;
+        text-decoration: none;
+      }
+      p {
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        margin: 1.5rem;
+      }
+      :target {
+        background-color: darkolivegreen;
+        text-shadow: firebrick;
+        font-size: bold;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS :target Pseudo-Class</h1>
+    </header>
+    <nav>
+      <a href="#p1">paragraph 1</a>
+      <a href="#p2">paragraph 2</a>
+      <a href="#p3">paragraph 3</a>
+      <a href="#p4">paragraph 4</a>
+      <a href="#p5">paragraph 5</a>
+    </nav>
+    <main>
+      <p id="p1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia maiores,
+        repellat illum dolorum dolorem repellendus! Quibusdam cumque ipsam aut,
+        perferendis quo exercitationem quaeraborum necessitatibus doloribus nam
+        assumenda voluptaffuga, nostrborum necessitatibus doloribus nam
+        assumenda voluptates, illo incidunt temporibus error minima pariatur
+        voluptatem. Sequi fugit fuga, nostrt tempore itaque, neque, deleniti
+        ducimus consequatur dolorem.
+      </p>
+      <p id="p2">
+        Recusandae libero rerum dolores borum necessitatibus doloribus nam
+        assumenda voluptates, illo incidunt temporibus error minima pariatur
+        voluptatem. Sequi fugit fuga, nostrborum necessitatibus doloribus nam
+        assumenda vosse. Fugit, quas?
+      </p>
+      <p id="p3">
+        Molestiae excepturi distinctio atque modi autem aliquid explicabo, iusto
+        deserunt doloribus libero, quo exercitationem quaeraborum necessitatibus
+        doloribus napariatur voluptatem. Sequi fugit fuga, nostreatae alias
+        corporis corrupti amet magni quibusdam ad vero pariatur fuga delectus
+        cum nisi repudiandae iste asperiores. Quod.
+      </p>
+      <p id="p4">
+        Enim animi consectetur iure soluta odit delectus officia, sint saepe
+        amet quae consequatur evenietborum necessitatibus doloribus nam
+        assumenda voluptates, illo incidunt temporibus error minima pariatur
+        voluptatem. Sequi fugit fuga, nostrborum necessitatibus doloribus nam
+        assumenda volribus error minima pariatur voluptatem. Sequi fugit fuga,
+        nostr dolores, cum veritatis. Magni inventore voluptatibus, illo
+        asperiores laboriosam consectetur non dolores aliquam doloribus, soluta
+        veniam.
+      </p>
+      <p id="p5">
+        Repellat ducimus laborum necessitatibus doloribus nam assumenda
+        voluptates, illo incemporibus error minima pariatur voluptatem. Sequi
+        fugit fuga, nostrborum necessitatibus doloribus nam assumenda
+        voluptates, illo incidunt temporibus error minima pariatur voluptatem.
+        Sequi fugit fuga, nostrborum necessitatibus doloribus nam assumenda
+        voluptates, illo incidunt temporibus error minima pariatur voluptatem.
+        Sequi fugit fuga, nostrpisci voluptate eos asperiores error iusto quasi,
+        perferendis eius tempora dolores?
+      </p>
+    </main>
+    <script>
+      window.addEventListener("load", setCurr);
+      //   load means coming from out of the page
+      document.addEventListener("DOMContentLoaded", setCurr);
+
+      window.addEventListener("hashchange", setCurr);
+      //   haschange even means navigation on the same page on click
+      //   popstate event when the page is loading
+
+      function setCurr(ev) {
+        let p, a, id;
+        p = document.querySelector(":target");
+        console.log(ev.type);
+        console.log(p);
+        if (p) {
+          id = `a[href="#${p.id}"]`;
+
+          document.querySelectorAll(".current").forEach((anchor) => {
+            anchor.classList.remove("current");
+          });
+          a = document.querySelector(id);
+          a.classList.add("current");
+        }
+      }
+    </script>
+  </body>
+</html>

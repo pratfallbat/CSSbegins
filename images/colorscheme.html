@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Colour Schemes</title>
+<!--    <link rel="stylesheet" href="scheme.css" />-->
+      <style>
+      
+      /**
+Primary - hsl(34,71%,62%) orange
+p1 hsl(34,71%,37%)
+p2 hsl(34,71%,62%)
+p3 hsl(34,71%,87%)
+Secondary - hsl(346,60%,59%) red
+s1 hsl(346,60%,34%)
+s2 hsl(346,60%,59%)
+s3 hsl(346,60%,84%)
+Greys
+hsl(0deg, 0%, 10%);
+hsl(0deg, 0%, 30%);
+hsl(0deg, 0%, 50%);
+hsl(0deg, 0%, 70%);
+hsl(0deg, 0%, 90%);
+**/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 20px;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: hsl(34, 71%, 62%);
+}
+body {
+  min-height: 100vh;
+}
+.wrapper {
+  width: 80vw;
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: hsl(34, 71%, 87%);
+  box-shadow: 0px 0px 4px hsl(0deg, 0%, 30%);
+}
+header {
+  background-image: url(https://picsum.photos/200/300);
+  background-size: cover;
+  background-position: 50% 100%;
+  padding: 2rem 2rem;
+  min-height: 600px;
+    
+}
+header > h1 {
+  font-size: 6rem;
+  color: hsl(346, 60%, 34%);
+  text-shadow: 2px 2px 2px hsl(346, 60%, 84%);
+}
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2rem;
+  padding: 1rem 2rem;
+}
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: hsl(346, 60%, 59%);
+}
+.nav-link {
+  flex-basis: 25%;
+  padding: 0.5rem 2rem;
+  font-size: 1.4rem;
+  text-align: center;
+  text-decoration: none;
+  color: hsl(0deg, 0%, 90%);
+}
+.nav-link:hover {
+  text-decoration: underline overline;
+  background-color: hsl(0deg, 0%, 90%);
+  color: hsl(346, 60%, 59%);
+}
+.col h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: hsl(346, 60%, 59%);
+  text-shadow: 2px 2px 2px hsl(346, 60%, 84%);
+}
+.col p {
+  font-size: 1rem;
+  margin: 1rem 0;
+  color: hsl(0deg, 0%, 30%);
+}
+footer {
+  padding: 2rem 2rem;
+  background-color: hsl(34deg, 71%, 37%);
+}
+footer p {
+  font-size: 0.8rem;
+  color: hsl(34deg, 71%, 87%);
+}
+      
+      </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+          <h1>Once Rajat proposed a girl</h1>
+      </header>
+      <nav class="main-nav">
+        <a class="nav-link" href="#">Kanti Shah ke angoor</a>
+        <a class="nav-link" href="#">Desi boys</a>
+        <a class="nav-link" href="#">Rajat Randi</a>
+        <a class="nav-link" href="#">Ghoda behen ka loda</a>
+      </nav>
+      <main>
+        <div class="col">
+          <h2>Kali Taatti </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
+            eum itaque quibusdam expedita, assumenda ipsum maiores! Cumque ullam
+            odit laudantium porro, tempora in, et aliquid, autem hic doloremque
+            ducimus veniam.
+          </p>
+          <p>
+            Soluta laboriosam dicta similique repellendus a nemo ratione! Odio,
+            tempore sit quibusdam consequuntur pariatur molestiae quaerat fuga.
+            Necessitatibus inventore cum adipisci sequi beatae ratione
+            repellendus, praesentium, deserunt in, temporibus ipsam.
+          </p>
+          <p>
+            Earum, odit inventore? Modi itaque magnam, ad iusto quasi maiores
+            eveniet sequi accusamus ab temporibus velit, dolore necessitatibus
+            ut in non nulla voluptas officiis reiciendis! Nihil eius cumque
+            repellendus soluta!
+          </p>
+        </div>
+        <div class="col">
+          <h2>Hug diya</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error hic
+            nobis, mollitia magni cupiditate impedit vel suscipit ad qui minima,
+            exercitationem sequi labore doloribus rem in aliquam atque, iste
+            vitae.
+          </p>
+          <p>
+            Sint quas eveniet consectetur, id quos harum eum eligendi unde
+            ducimus amet dolorum inventore molestias vero enim ex voluptate
+            ipsum saepe voluptates, mollitia magni quaerat! Quidem magnam
+            repellat aliquid eius?
+          </p>
+        </div>
+      </main>
+      <footer>
+        <p>&copy; 2019 Turkey Stuff Inc.</p>
+      </footer>
+    </div>
+  </body>
+</html>

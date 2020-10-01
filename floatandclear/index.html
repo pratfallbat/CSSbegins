@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Intro to CSS Float</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      p {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      .one img {
+        float: left;
+        /* margin: 1rem; */
+        padding: 1rem;
+      }
+      .one {
+        background-color: purple;
+        overflow: auto;
+        clear: both;
+      }
+      .two {
+        background-color: gold;
+        overflow: auto;
+        /* add the same background to image as it is in p */
+      }
+      .two img {
+        float: right;
+        /* margin: 1rem; */
+        padding: 1rem;
+      }
+      .three img {
+        float: left;
+        /* margin: 1rem; */
+        padding: 1rem;
+      }
+      .three {
+        background-color: green;
+        overflow: auto;
+        clear: both;
+        /* or */
+        /* clear: right;     */ /* create required space on left */
+      }
+      h1,
+      h2 {
+        padding: 2rem;
+        text-shadow: 2px 2px 4px purple, -2px -2px 2px hsla(135, 69%, 23%, 0.5);
+        /* for the effects on shadow only  */
+        /* r d blur radius  color*/
+        /* -ve -> l u blur radius color */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Intro to CSS Floats</h1>
+    </header>
+    <main>
+      <h2>Sub Heading</h2>
+      <p class="one">
+        <img
+          src="../img/cursive-letter-worksheets.gif"
+          width="200px"
+          height="200px"
+          alt="deadpool"
+        />
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae commodi
+        deserunt ipsum cumque molestiae magni cum sunt fuga debitis eum totam
+        impedit, voluptatum quis quas ratione veritatis itaque voluptatem.
+        Optio. jasdf laksdf jlsdf lasdkf lakdsfljskdlf jasld fjasldkfj
+        lasdkjflasdf lasdlfasdlfk alsdf lasdkjfl sdlfasdf asdfjhas kdfhaskdf
+        aksdh skfhksdf hjask fjsak dfs Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Quae commodi deserunt ipsum cumque molestiae magni cum
+        sunt fuga debitis eum totam impedit, voluptatum quis quas ratione
+        veritatisf lasdlfasdlfk alsdf sdlfasdf asdfjhas kdfhaskdf aksdh skfhksdf
+        fjsak dfs
+      </p>
+      <p class="two">
+        <img
+          src="../img/cursive-letter-worksheets.gif"
+          width="200px"
+          height="200px"
+          alt="deadpool"
+        />
+        jskdlf jasld fjasldkfj lasdkjflasdf lasdlfasdlfk alsdf lasdkjfl sdlfasdf
+        asdfjhas kdfhaskdf aksdh skfhksdf hjask fjsak dfs Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Quae commodi deserunt ipsum cumque
+        molestiae magni cum sunt fuga debitis eum totam impedit, voluptatum quis
+        quas ratione veritatis itaque voluptatem. Optio. jasdf laksdf jlsdf
+        lasdkf lakdsfljskdlf jasld fjasldkfj lasdkjflasdf lasdlfasdlfk alsdf
+        lasdkjfl sdlfasdf asdfjhas kdfhaskdf aksdh skfhksdf hjask fjsak dfs
+      </p>
+      <p class="three">
+        <img
+          src="../img/cursive-letter-worksheets.gif"
+          width="200px"
+          height="200px"
+          alt="deadpool"
+        />
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae commodi
+        deserunt ipsum cumque molestiae magni cum sunt fuga debitis eum totam
+        impedit, voluptatum quis quas ratione veritatis itaque voluptatem.
+        Optio. jasdf laksdf jlsdf lasdkf lakdsfljskdlf jasld fjasldkfj
+        lasdkjflasdf lasdlfasdlfk alsdf lasdkjfl sdlfasdf asdfjhas kdfhaskdf
+        aksdh skfhksdf hjask fjsak dfs Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Quae commodi deserunt ipsum cumque molestiae magni cum
+        sunt fug= lasdkjflasdf lasdlfasdlfk alsdf lasdkjfl sdlfasdf asdfjhas
+        kdfhaskdf aksdh skfhksdf hjask fjsak dfs
+      </p>
+    </main>
+  </body>
+</html>

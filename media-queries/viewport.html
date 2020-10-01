@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Viewport Meta Tag</title>
+    <meta name="viewport" content="width=device-width" />
+    <!-- get teh  same width as device width so dont have to scroll from left to right annd we can fit the content properly then -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font: 16px/1.5 Helvetica, Arial, sans-serif;
+      }
+      h1,
+      h2 {
+        padding: 1rem 0;
+        margin: 0 3rem;
+      }
+      main {
+        padding: 1rem 2rem;
+        margin: 0 2rem;
+        font-size: 1rem;
+      }
+      main p {
+        padding: 0.5rem 0;
+      }
+      p {
+        color: deepskyblue;
+        font-size: 24px;
+      }
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 3rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+        main {
+          margin: 0 0.5rem;
+        }
+        p {
+          color: orange;
+          font-size: 1.6rem;
+          line-height: 1.6;
+          padding: 0.8rem 0;
+        }
+      }
+      @media (min-width: 1200px) {
+        p {
+          font-size: 1.5rem;
+          column-count: 2;
+          color: green;
+        }
+        main h2 {
+          font-size: 3rem;
+        }
+      }
+
+      @media (min-width: 2000px) {
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Viewport Meta Tag</h1>
+      <h2>CSS Media Queries</h2>
+    </header>
+    <main>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsum
+        atque sunt eos cumque saepe labore illo, voluptatem temporibus odio
+        laborum architecto, voluptatibus ad aut tenetur nisi, quasi quas quis.
+      </p>
+      <p>
+        Veniam officia a esse quasi praesentium expedita, explicabo aliquam,
+        iusto nulla reiciendis suscipit accusantium accusamus minus debitis
+        itaque voluptatem, consequuntur, ad earum obcaecati quas natus dolor.
+        Doloribus velit, laborum quia!
+      </p>
+      <p>
+        Quae sequi nulla aliquam, accusantium molestiae possimus ratione est
+        earum minus laudantium cupiditate quisquam suscipit voluptates repellat
+        laboriosam, dolorum hic dolore alias officia. Voluptatibus sint id,
+        explicabo fuga harum ab.
+      </p>
+    </main>
+  </body>
+</html>

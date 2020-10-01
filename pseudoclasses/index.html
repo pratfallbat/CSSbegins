@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+<style>
+    
+p{
+  box-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.5), -2px -2px 4px  rgba(120, 120, 64, 0.5);
+  padding: 20px;   /*automatically the same background color as content  */
+  margin: 30px; /* always transparent  */
+  border: 10px solid indianred; 
+  /* you pick the color */
+}
+p:hover{
+    color: rebeccapurple;
+    font-weight: 1900;
+    font-style: italic;
+  box-shadow: 4px 4px 4px  rgba(0, 0, 0, 0.5);  
+}
+#ricky{
+    border-width: 0;
+    margin:10px;
+    background-color: white;
+
+  
+}
+#bubbles{  
+    border-width: 0; 
+    margin:10px;
+    background-color: white;
+}
+#julian{
+    border-width: 0;
+    margin:10px;
+    background-color: whitesmoke;
+
+
+
+}
+header h1{
+padding: 2rem;
+background-color: indianred;
+margin: 2rem;
+max-width: 50%;
+box-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.5), -2px -2px 4px  rgba(120, 120, 64, 0.5);
+;
+
+border-radius:  20px/100px ;
+}
+
+header h1:hover{
+box-shadow: 4px 4px 4px  rgba(0, 0, 0, 0.5);
+}
+input:required{
+  font-size: 2px solid red;
+}
+
+input:optional{
+  margin: 1rem;
+}
+
+input:checked{
+  margin: 4rem;
+}
+br:empty{
+  line-height: 4rem;
+}
+/* Pseudo element */
+p::selection{
+background-color: gold;
+color: rgb(134, 122, 122);
+
+}
+p::first-letter{
+font-size: 3rem;
+}
+
+p::first-line{
+color: green;
+}
+p::after{
+  content: ":)";
+  padding-left: 1rem;
+}
+
+/* nth */
+/* you cant edit the html directly using classes and id */
+ul li:first-child{
+color: red;
+}
+ul li:last-child{
+color: gold;
+}
+
+/* nthchild(an+b) */
+/* li:nth-child(n) *//* all element */
+li:nth-child(3n+2){   /* starting at positin 2 and after every 3  */
+  color: greenyellow;
+}
+li:nth-child(odd){
+  background-color: olive;
+}
+li:nth-child(even){
+  background-color: peachpuff;
+}
+
+.simon p:first-of-type{
+  font-size: 1.5rem;
+  
+}
+/* .simon p:nth-of-type(n){    *//* n=a;ll of  them */
+  /* font-size: 2.5rem; */
+  
+/* } */
+.simon p:nth-of-type(1){  /* .main p:first-of-type = .main p nth of type(1) ,     and  it need to have a aelement */
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.simon :nth-child(3n){
+  background-color: deepskyblue;
+}
+
+</style>
+  </head>
+  <body>
+    <header id="randy" class="fred ricky bubbles julian">
+      <h1>CSS selector  chains CASCADE</h1>
+    </header>
+    <main   id="simon" class="simon">
+      <h1>Main Heading Heading</h1>
+      <h2> The Sub Heading</h1>
+    <p> sdefsd asdasdas dfcdascfascfdasdas
+      s hic 3)source order veritatis quis, ea ullam minus, impedit
+        numquam blanditiis haru m? Sapiente, dignissimos? Aspernatur nam natus
+        quos laboriosam?
+        voluptatibus hic 3)source order veritatis quis, ea ullam minus, impedit
+        numquam blanditiis haru m? Sapiente, dignissimos? Aspernatur nam natus
+        quos laboriosam?
+        <br>
+      <input type="text" required>
+      <br></br>
+      <input type="checkbox" checked name="csa" id="">
+    </p>
+      <p id="ricky">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt autem
+        doloribus Three tnkngs decide which stiles ge applied laborum
+        voluptatibus hic 3)source order veritatis quis, ea ullam minus, impedit
+        numquam blanditiis haru m? Sapiente, dignissimos? Aspernatur nam natus
+        quos laboriosam?
+        voluptatibus hic 3)source order veritatis quis, ea ullam minus, impedit
+        numquam blanditiis haru m? Sapiente, dignissimos? Aspernatur nam natus
+        quos laboriosam?
+      
+        voluptatibus hic 3)source order veritatis quis, ea ullam minus, impedit
+        numquam blanditiis haru m? Sapiente, dignissimos? Aspernatur nam natus
+        quos laboriosam?
+        voluptatibus hic 3)source order veritatis quis, ea ullam minus, impedit
+        numquam blanditiis haru m? Sapiente, dignissimos? Aspernatur nam natus
+        quos laboriosam?
+      </p>
+      
+      <p id="bubbles">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt autem
+        doloribus laborum voluptatibus hic veritatis quis, ea ullam minus,
+        impedit numquam blanditiis harum? Sapiente, dignissimos? Aspernatur nam
+        natus quos laboriosam?
+        voluptatibus hic 3)source order veritatis quis, ea ullam minus, impedit
+        numquam blanditiis haru m? Sapiente, dignissimos? Aspernatur nam natus
+        quos laboriosam?
+        voluptatibus hic 3)source order veritatis quis, ea ullam minus, impedit
+        numquam blanditiis haru m? Sapiente, dignissimos? Aspernatur nam natus
+        quos laboriosam?
+        voluptatibus hic 3)source order veritatis quis, ea ullam minus, impedit
+        numquam blanditiis haru m? Sapiente, dignissimos? Aspernatur nam natus
+        quos laboriosam?
+      </p>
+      <p id="julian">
+       
+       Pseudo element is creating something that can be styled
+       
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt autem
+        doloribus laborum voluptatibus hic veritatis quis, ea ullam minus,
+        impedit numquam blanditiis harum? Sapiente, dignissimos? Aspernatur nam
+        natus quos laboriosam?
+        voluptatibus hic 3)source order veritatis quis, ea ullam minus, impedit
+        numquam blanditiis haru m? Sapiente, dignissimos? Aspernatur nam natus
+        quos laboriosam?
+       
+         
+        voluptatibus hic 3)source order veritatis quis, ea ullam minus, impedit
+        numquam blanditiis haru m? Sapiente, dignissimos? Aspernatur nam natus
+        quos laboriosam?
+        
+      </p>
+      <p>
+        xcvbxcvbxcv 
+      <ul>
+        <li>First 1</li>
+        <li>First 2</li>
+        <li>First 3</li>
+        <li>First 4</li>
+        <li>First 5</li>
+        
+        <li>First 1</li>
+        <li>First 2</li>
+        <li>First 3</li>
+        <li>First 4</li>
+        <li>First 5</li>
+         
+      </ul>
+      hkjbvhg 
+    </p>
+    </main>
+  </body>
+</html>

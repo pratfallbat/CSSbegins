@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        margin: 1rem auto;
+        background-color: #eee;
+      }
+      .content {
+        background-color: #bad;
+        display: flex;
+        flex-direction: row;
+        /* by default its row of ots inside column */
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        /* main-axis */
+        align-items: stretch;
+        /* cross azis */
+      }
+      header {
+        background-color: #bada55;
+        padding: 1rem;
+      }
+      footer {
+        background-color: #badaff;
+        padding: 1rem;
+      }
+
+      nav {
+        background-color: gold;
+        /* flex: 1 1 80px; */
+        flex: 1;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      main {
+        background-color: khaki;
+        /* flex: 3 1 150px; */
+        flex: 3;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      aside {
+        background-color: cornflowerblue;
+        /* flex: 2 1 100px; */
+        flex: 2;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Flexbox Getting Started</h1>
+      </header>
+
+      <section class="content">
+        <nav>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+          </ul>
+        </nav>
+
+        <main>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+            quas in, eum maiores quos animi voluptatibus nam culpa rem, dolorum
+            eos ipsam consequuntur incidunt voluptates illo quo provident esse
+            molestiae.
+          </p>
+          <p>
+            Quis odio quaerat amet ex recusandae temporibus dolores aperiam eum
+            voluptas quidem illum neque incidunt asperiores, eaque ducimus quia
+            veritatis facere autem a saepe quasi libero animi ullam! Illo,
+            blanditiis.
+          </p>
+        </main>
+
+        <aside>
+          <p>
+            Vitae dignissimos dolores enim excepturi sed alias, commodi, quis
+            perspiciatis doloremque magnam quod exercitationem, ullam officia
+            quaerat mollitia voluptates aperiam deleniti modi.
+          </p>
+        </aside>
+      </section>
+
+      <footer>
+        <p>&copy; 2018 Turkey Stuff Inc.</p>
+      </footer>
+    </div>
+  </body>
+</html>

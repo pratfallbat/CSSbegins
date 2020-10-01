@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Sibling Selectors</title>
+    <style>
+      /* only if h2 has h1 in front of ot */
+      h1 + h2 {
+        color: orange;
+      }
+      /* h2 ke baad wale p ko  (only 1)*/
+      h2 + p {
+        color: blue;
+      }
+
+      h2 ~ p {
+        border-left: 10px solid green;
+      }
+      p ~ p {
+        /* all paragraph that has p as sibling */
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Sibling Selectors</h1>
+      <h2>General &amp; Adjacent</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, dicta,
+        sit. Obcaecati rerum voluptate, consequatur ex soluta eligendi vero at.
+        Nisi temporibus amet nobis vel nulla totam corporis facere enim?
+      </p>
+    </header>
+    <main>
+      <h2>main area heading</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi illum
+        atque, doloribus ullam reprehenderit, recusandae quaerat veritatis
+        voluptatibus molestiae rerum esse molestias delectus, tempora quae in
+        fugit ex sit. Commodi!
+      </p>
+      <p>
+        Velit, asperiores et non tempora doloribus repellendus? Asperiores saepe
+        illo a enim omnis placeat dolorem, nobis ut quis voluptate perferendis
+        accusantium sunt explicabo voluptates nulla obcaecati odio, aliquam
+        quaerat, magnam?
+      </p>
+      <p>
+        Unde optio, vero consectetur vel voluptatibus enim aliquam officia
+        tempore laboriosam, obcaecati, tenetur laudantium quos nisi minima
+        possimus sit. Voluptatum laborum perferendis repellendus veritatis
+        quisquam dolorem cupiditate cumque accusamus rerum.
+      </p>
+    </main>
+  </body>
+</html>

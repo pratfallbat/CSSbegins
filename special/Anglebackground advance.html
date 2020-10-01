@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angled Backgrounds</title>
+    <style>
+        :root{
+            --hue: 74deg;
+            --mastC: hsl(74deg, 84%, 89%);
+            --firstC: hsl(74deg, 34%, 59%);
+            --secondC: hsl(74deg, 64%, 29%);
+            --thirdC: hsl(74deg, 34%, 29%);
+            --darkTxt: hsl(74deg, 80%, 20%);
+            --lightTxt: hsl(74deg, 80%, 80%);
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        *::before,
+        *::after{
+            box-sizing: inherit;
+        }
+        html{
+            font-size: 20px;
+            line-height: 1.5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-weight: 100;
+        }
+        html,
+        body{
+            background-color: hsl(var(--hue), 64%, 59%);
+        }
+        .wrapper{
+            max-width: 1000px;
+            margin:0 auto;
+        }
+        h1{
+            font-size: 5.063rem;
+        }
+        h2{
+            font-size: 3.375rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        section h2{
+            padding: 1rem 0;
+        }
+        section p{
+            text-align: justify;
+            padding-bottom: 1rem
+        }
+        .mast h1,
+        .mast h2{
+            color: var(--darkTxt);
+        }
+        .first h2{
+            color: var(--darkTxt);
+        }
+        .second h2{
+            text-align: right;
+            color: var(--lightTxt);
+        }
+        .second p{
+            color: var(--lightTxt);
+        }
+        .third h2,
+        .third p{
+            color: var(--lightTxt);
+        }
+        section{
+/*            margin-top: 3rem;*/
+            margin-top: -3rem;
+        }
+        .mast, 
+        .first,
+        .second, 
+        .third{
+            padding: 3rem 2rem 5rem;
+            position: relative;
+            z-index: 2;
+            overflow: hidden
+        }
+        .mast::before,
+        .first::before,
+        .second::before,
+        .third::before{
+            position: absolute;
+            content: " ";
+            display: block;
+            z-index:-1;
+            top: 2rem;
+            left: -2rem;
+            right: -2rem;
+            bottom: 2rem;
+        }
+        .mast::before{
+            border-top: 2rem dashed var(--secondC);
+            background-color: var(--mastC);
+            transform: rotate(-4deg)
+        }
+        .first::before{
+            background-color: var(--firstC);
+            transform: rotate(3deg);
+            border-bottom: 2rem solid var(--mastC);
+        }
+        .second::before{
+            background-color: var(--secondC);
+            transform: rotate(-3deg);
+            border-top: 2rem solid var(--firstC)
+        }
+        .third::before{
+            background-color: var(--thirdC);
+            transform: rotate(4deg);
+        }
+        .mast{
+            padding-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="mast">
+            <h1>Site Heading</h1>
+            <h2>Sub Heading</h2>
+        </header>
+        <section class="first">
+            <h2>Other Heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure praesentium non voluptatem laboriosam corrupti, dolores molestiae dicta ea, inventore voluptatum expedita tempore consequatur nemo, labore nihil fugit cumque maxime ipsum?</p>
+            <p>Vitae quisquam numquam error quas culpa. Atque eligendi explicabo eaque ab non porro in fugit, facilis placeat, aliquam fugiat provident commodi vitae excepturi repudiandae labore ipsum aut laudantium sint. Cupiditate.</p>
+        </section>
+        <section class="second">
+            <h2>Cool Heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius illo, aliquam magni debitis ab aspernatur ipsa repudiandae neque expedita nostrum nesciunt veniam beatae reprehenderit in animi, eveniet accusamus dolore ratione.</p>
+            <p>Ab quidem debitis consectetur tenetur. Excepturi perspiciatis magni saepe unde fugiat eveniet ea quidem modi deleniti veniam dolore inventore doloribus repellendus similique at corporis asperiores incidunt ratione cum repudiandae, praesentium?</p>
+            <p>Magni temporibus molestiae libero minima rem provident officiis non doloribus facere, incidunt soluta ducimus at rerum veniam voluptate adipisci hic illum quae unde a ab accusamus voluptates minus excepturi. Nisi.</p>
+        </section>
+        <section class="third">
+            <h2>Minor Heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta repudiandae aliquam, molestias! Voluptatum expedita eius quos vitae itaque voluptas distinctio obcaecati corporis quas veritatis cum consequatur, possimus cumque. Architecto, inventore. Officiis aut quibusdam, provident excepturi repellendus ea explicabo corporis libero veritatis saepe blanditiis sed consequatur hic soluta alias sit fugiat omnis at, dolores fugit consectetur. Nulla tempore quos inventore eos! Iure illum earum magnam veritatis soluta, error! Amet atque perferendis et ad sapiente vitae illo excepturi dolor ratione odio, maxime modi, officiis quasi explicabo eos deserunt iure voluptatum possimus optio.</p>
+        </section>
+    </div>
+</body>
+</html>

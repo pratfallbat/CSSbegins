@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        font-size: 2rem;
+        background: #ccc;
+        padding: 0.2rem;
+        cursor: pointer;
+      }
+
+      p.mario,
+      p.luigi:not(.body) {
+        color: olive;
+        background-color: cyan;
+      }
+
+      button:not([disabled]) {
+        background-color: coral;
+      }
+
+      img:not([alt]) {
+        width: 50%;
+        border: 3px solid red;
+      }
+
+      :not(p) {
+        border: 1px solid gold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS :not( ) pseudo-class</h1>
+    </header>
+    <main>
+      <p class="mario intro">
+        <img src="../../img/deadpool.jpg" /> Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit. Perferendis libero delectus nulla. Animi,
+        cupiditate, quae. Facere sint est officia nihil animi, vitae iste
+        impedit laboriosam. Velit tempore maxime libero, quisquam.
+        <span>span at the end</span>
+      </p>
+
+      <p class="luigi body">
+        <img src="../../img/img-1.jpg" alt="deadpool" /> Alias debitis magni,
+        pariatur nesciunt sapiente voluptates. Sapiente voluptate eligendi,
+        laborum suscipit doloremque, laudantium maiores repellendus possimus
+        atque dolorem ab tenetur sed nam dolor natus velit voluptatibus
+        corporis, rerum reiciendis?
+        <button id="btn">Click me</button>
+        <button id="noBtn" disabled>Do NOT click me</button>
+      </p>
+      <p class="luigi">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ea
+        minima, sed quas necessitatibus vero doloremque officia corporis eaque
+        rem repellat. Velit doloribus earum dolore totam, blanditiis itaque
+        pariatur dolorem.
+      </p>
+    </main>
+  </body>
+</html>

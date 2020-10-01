@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Width vs Max-Width</title>
+    <style>
+      main {
+        background-color: lightskyblue;
+        padding: 1rem;
+        min-width: 800px;
+        /* width means fixed, cannot be smalaler and larger */
+      }
+      main p {
+        margin: 1rem auto;
+        background-color: white;
+        padding: 1rem;
+      }
+      main p:nth-child(1) {
+        min-width: 600px;
+        /* cannot be smaller than 600px */
+      }
+      main p:nth-child(2) {
+        max-width: 600px;
+        /* can't exceed 600px */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Width vs Max-Width</h1>
+    </header>
+    <main>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+        possimus expedita beatae soluta illo error. Libero dolore voluptate
+        doloremque saepe sed sequi, cupiditate laboriosam, similique porro est
+        magnam natus! Consequatur.
+      </p>
+      <p>
+        Sunt impedit fugiat dignissimos dolor dolorem, pariatur. Impedit
+        aperiam, tempora quae quaerat quia dolor placeat amet quod atque, iusto
+        perferendis fuga laborum culpa sint deserunt, itaque suscipit
+        voluptatibus mollitia. Et?
+      </p>
+    </main>
+  </body>
+</html>

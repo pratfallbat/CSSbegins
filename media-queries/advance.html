@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Media Queries Beyond Width</title>
+    <style>
+      p {
+        color: orange;
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
+      @media all and (min-width: 800px) {
+        p {
+          color: cornflowerblue;
+          font-size: 2rem;
+        }
+      }
+      @media all and (orientation: landscape) {
+        p {
+          background-color: cornflowerblue;
+          color: white;
+        }
+      }
+
+      /* @media all and (orientation: landscape) and (min-aspect-ratio: 3/1) and (min-height: 1000px) {
+        p {
+          background-color: cornflowerblue;
+          color: white;
+        } */
+      @media all and (min-aspect-ratio: 4/1) {
+        p {
+          font-size: 0.8rem;
+        }
+      }
+      @media all and (min-resolution: 60dpi) {
+        p {
+          border: 3px solid black;
+        }
+      }
+      @media all and (min-resolution: 200dpi) {
+        p {
+          border: 3px solid gold;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Main Heading</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus,
+        alias magnam molestiae tempora porro voluptate dolorem ex rerum dolorum
+        at explicabo laudantium repudiandae, adipisci beatae. Deleniti quam
+        quidem magnam nostrum.
+      </p>
+      <p>
+        Ipsam, totam? Quas praesentium neque voluptates quaerat perspiciatis id
+        culpa esse, optio consequatur assumenda magnam odit natus ea earum,
+        perferendis qui sapiente fuga aliquam, tempore iste voluptatum. Quo,
+        possimus, animi.
+      </p>
+      <p>
+        Culpa, recusandae. Consequuntur sequi in nihil! Eligendi nemo, totam
+        quam non, unde quod rem exercitationem a dolorem dignissimos fugiat ad
+        labore eum, expedita atque quidem blanditiis saepe maxime cumque illo.
+      </p>
+    </main>
+  </body>
+</html>

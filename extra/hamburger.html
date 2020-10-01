@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Animated Hamburger menu</title>
+    <style>
+      html {
+        font-size: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        line-height: 1.6;
+      }
+      .header {
+        background-color: hsl(220, 50%, 40%);
+        color: #fff;
+        position: relative;
+        z-index: 100;
+        box-shadow: 0 2px 4px #333;
+      }
+      .header h1 {
+        font-size: 2rem;
+        line-height: 1;
+        padding: 0.5rem 1rem;
+        margin: 0;
+      }
+      main {
+        padding: 2rem;
+      }
+      main h2 {
+        margin: 0;
+      }
+      p {
+        color: #555;
+        padding: 0;
+        margin: 2rem 0;
+      }
+      /*****************************************
+          NAV MENU
+      *****************************************/
+      .main-nav {
+        display: none;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: hsl(30, 30%, 90%);
+      }
+      .expanded .main-nav {
+        display: flex;
+      }
+      .main-nav a {
+        color: #333;
+        flex-basis: 25%;
+        text-align: center;
+        width: 100%;
+        padding: 2rem 0;
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+
+      /************************
+        THE BURGER
+      ************************/
+      .burger {
+        position: absolute;
+        top: 26px;
+        right: 20px;
+        height: 4px;
+        line-height: 0;
+        width: 44px;
+        background-color: white;
+        border-radius: 1px;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        transition: all 0.3s linear;
+      }
+      .burger::before,
+      .burger::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 40px;
+        height: 0;
+        border: 2px solid white;
+        border-radius: 1px;
+        padding: 0;
+        margin: 0;
+        transition: all 0.3s linear;
+      }
+      .burger::before {
+        top: 0;
+        transform-origin: left center;
+        transform: translate(0, -16px) rotate(0deg);
+      }
+      .burger::after {
+        bottom: 0px;
+        transform-origin: right center;
+        transform: translate(0, 16px) rotate(0deg);
+      }
+      .expanded .burger {
+        background-color: transparent;
+        border-radius: 4px;
+      }
+      .expanded .burger::before {
+        transform: translate(6px, 16px) rotate(-45deg);
+        border-radius: 4px;
+      }
+      .expanded .burger::after {
+        transform: translate(-6px, 16px) rotate(45deg);
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body class="expanded">
+    <header class="header ">
+      <span class="burger"></span>
+      <h1>Web site</h1>
+    </header>
+    <nav class="main-nav">
+      <a href="#" class="nav-link">Link 1</a>
+      <a href="#" class="nav-link">Link 2</a>
+      <a href="#" class="nav-link">Link 3</a>
+      <a href="#" class="nav-link">Link 4</a>
+    </nav>
+    <main>
+      <h2>Page Title</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+        repellendus expedita harum recusandae modi. Eveniet quasi ab tempora
+        aperiam commodi, inventore, accusantium delectus quaerat id voluptates
+        voluptate, expedita asperiores sed!
+      </p>
+      <p>
+        Eveniet animi veritatis reprehenderit ullam, eligendi voluptatum
+        voluptate in, repellat voluptatem minus exercitationem, eum quisquam.
+        Eaque non, inventore, quae, magnam libero id ratione ullam ab quos sit
+        aliquam repudiandae quas.
+      </p>
+      <p>
+        Ipsa velit amet sequi magnam aliquid. Itaque odio, numquam suscipit
+        adipisci sint sapiente facere ducimus quisquam voluptatum repudiandae ea
+        possimus autem recusandae magnam voluptas excepturi! Voluptatibus nemo
+        sequi commodi soluta.
+      </p>
+      <p>
+        Animi, praesentium maxime ipsa officiis iure pariatur nam corporis
+        dolorem nobis, eveniet consequatur quasi accusamus autem! Nemo ad
+        voluptas tenetur expedita temporibus praesentium perferendis voluptatem
+        ratione unde incidunt, cupiditate labore?
+      </p>
+    </main>
+    <script>
+      let ISEXPANDED = true;
+
+      document.addEventListener("DOMContentLoaded", () => {
+        //handle click event
+        let body = document.body;
+        body.addEventListener("click", ev => {
+          console.log("toggle expanded on header");
+          ev.currentTarget.classList.toggle(
+            "expanded"
+          ); /* showing the menu and the X */
+        });
+
+        //handle media query when the page loads for the default state onload
+        let query = window.matchMedia("min-width:700px");
+        if (query.matches) {
+          body.classList.add("expanded");
+          ISEXPANDED = true;
+        } else {
+          body.classList.remove("expanded");
+          ISEXPANDED = false;
+        }
+
+        //handle as the page size changes
+        const resizeObserver = new ResizeObserver(entries => {
+          for (let entry of entries) {
+            if (entry.contentRect.width > 700 && !ISEXPANDED) {
+              body.classList.add("expanded");
+              ISEXPANDED = true;
+            } else if (entry.contentRect.width < 700 && ISEXPANDED) {
+              body.classList.remove("expanded");
+              ISEXPANDED = false;
+            }
+          }
+        });
+        resizeObserver.observe(body);
+      });
+    </script>
+  </body>
+</html>
